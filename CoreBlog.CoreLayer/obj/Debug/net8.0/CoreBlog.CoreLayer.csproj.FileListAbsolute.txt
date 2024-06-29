@@ -1,0 +1,12 @@
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.CoreLayer\bin\Debug\net8.0\CoreBlog.CoreLayer.deps.json
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.CoreLayer\bin\Debug\net8.0\CoreBlog.CoreLayer.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.CoreLayer\bin\Debug\net8.0\CoreBlog.CoreLayer.pdb
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.CoreLayer\obj\Debug\net8.0\CoreBlog.CoreLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.CoreLayer\obj\Debug\net8.0\CoreBlog.CoreLayer.AssemblyInfoInputs.cache
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.CoreLayer\obj\Debug\net8.0\CoreBlog.CoreLayer.AssemblyInfo.cs
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.CoreLayer\obj\Debug\net8.0\CoreBlog.CoreLayer.csproj.CoreCompileInputs.cache
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.CoreLayer\obj\Debug\net8.0\CoreBlog.CoreLayer.sourcelink.json
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.CoreLayer\obj\Debug\net8.0\CoreBlog.CoreLayer.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.CoreLayer\obj\Debug\net8.0\refint\CoreBlog.CoreLayer.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.CoreLayer\obj\Debug\net8.0\CoreBlog.CoreLayer.pdb
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.CoreLayer\obj\Debug\net8.0\ref\CoreBlog.CoreLayer.dll
