@@ -11,4 +11,8 @@
     <ProjectReference Include="..\CoreBlog.EntityLayer\CoreBlog.EntityLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+
 </Project>
