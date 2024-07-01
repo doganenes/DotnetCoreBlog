@@ -1,4 +1,5 @@
 ﻿using CoreBlog.BusinessLayer.Abstract;
+using CoreBlog.DataAccessLayer.Repositories;
 using CoreBlog.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,14 +11,26 @@ namespace CoreBlog.BusinessLayer.Concrete
 {
     public class CategoryManager : ICategoryService
     {
+        GenericRepository<Category> repo = new GenericRepository<Category>();
+        CategoryRepository categoryRepository = new CategoryRepository();
         public void AddCategory(Category category)
         {
-            throw new NotImplementedException();
+            if (category.CategoryName != "" && category.CategoryDescription != "" && category.CategoryName.Length >= 5 && category.CategoryStatus == true)
+            {
+                categoryRepository.AddCategory(category);
+            }
+            else
+            {
+
+            }
         }
 
         public void DeleteCategory(Category category)
         {
-            throw new NotImplementedException();
+            if(category.CategoryId != 0)
+            {
+                repo.Delete(category);
+            }
         }
 
         public List<Category> GetAllCatgories()
