@@ -1,5 +1,5 @@
 ﻿using CoreBlog.BusinessLayer.Abstract;
-using CoreBlog.DataAccessLayer.Repositories;
+using CoreBlog.DataAccessLayer.EntityFramework;
 using CoreBlog.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -11,41 +11,34 @@ namespace CoreBlog.BusinessLayer.Concrete
 {
     public class CategoryManager : ICategoryService
     {
-        GenericRepository<Category> repo = new GenericRepository<Category>();
-        CategoryRepository categoryRepository = new CategoryRepository();
+        EfCategoryRepository efCategoryRepository;
+        public CategoryManager()
+        {
+            efCategoryRepository = new EfCategoryRepository();
+        }
         public void AddCategory(Category category)
         {
-            if (category.CategoryName != "" && category.CategoryDescription != "" && category.CategoryName.Length >= 5 && category.CategoryStatus == true)
-            {
-                categoryRepository.AddCategory(category);
-            }
-            else
-            {
-
-            }
+            efCategoryRepository.Insert(category);
         }
 
         public void DeleteCategory(Category category)
         {
-            if(category.CategoryId != 0)
-            {
-                repo.Delete(category);
-            }
+            efCategoryRepository.Delete(category);
         }
 
         public List<Category> GetAllCatgories()
         {
-            throw new NotImplementedException();
+            return efCategoryRepository.GetListAll();
         }
 
         public Category GetById(int id)
-        {
-            throw new NotImplementedException();
+        {   
+            return efCategoryRepository.GetById(id);
         }
 
         public void UpdateCategory(Category category)
         {
-            throw new NotImplementedException();
+            efCategoryRepository.Update(category);
         }
     }
 }
