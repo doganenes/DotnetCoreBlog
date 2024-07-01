@@ -1,4 +1,5 @@
-﻿using CoreBlog.EntityLayer.Concrete;
+﻿using CoreBlog.DataAccessLayer.Abstract;
+using CoreBlog.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;

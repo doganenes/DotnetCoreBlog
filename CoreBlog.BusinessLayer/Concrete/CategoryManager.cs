@@ -1,4 +1,5 @@
 ﻿using CoreBlog.BusinessLayer.Abstract;
+using CoreBlog.DataAccessLayer.Abstract;
 using CoreBlog.DataAccessLayer.EntityFramework;
 using CoreBlog.EntityLayer.Concrete;
 using System;
@@ -11,34 +12,36 @@ namespace CoreBlog.BusinessLayer.Concrete
 {
     public class CategoryManager : ICategoryService
     {
-        EfCategoryRepository efCategoryRepository;
-        public CategoryManager()
+        ICategoryDal _categoryDal;
+
+        public CategoryManager(ICategoryDal categoryDal)
         {
-            efCategoryRepository = new EfCategoryRepository();
+            _categoryDal = categoryDal;
         }
+
         public void AddCategory(Category category)
         {
-            efCategoryRepository.Insert(category);
+            _categoryDal.Insert(category);
         }
 
         public void DeleteCategory(Category category)
         {
-            efCategoryRepository.Delete(category);
+            _categoryDal.Delete(category);
         }
 
         public List<Category> GetAllCatgories()
         {
-            return efCategoryRepository.GetListAll();
+            return _categoryDal.GetListAll();
         }
 
         public Category GetById(int id)
         {   
-            return efCategoryRepository.GetById(id);
+            return _categoryDal.GetById(id);
         }
 
         public void UpdateCategory(Category category)
         {
-            efCategoryRepository.Update(category);
+            _categoryDal.Update(category);
         }
     }
 }

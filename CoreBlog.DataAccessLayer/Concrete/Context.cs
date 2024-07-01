@@ -13,7 +13,6 @@ namespace CoreBlog.DataAccessLayer.Concrete
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("server=ENES\\SQLEXPRESS;database=CoreBlogDB;TrustServerCertificate=true;Trusted_Connection=true");
-
         }
 
         public DbSet<About> Abouts { get; set; }
