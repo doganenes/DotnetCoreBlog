@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CoreBlog.DataAccessLayer.Abstract
 {
-    public interface ICategoryDal:IGenericDal<Category>
+    public interface IContactDal : IGenericDal<Contact>
     {
     }
 }
