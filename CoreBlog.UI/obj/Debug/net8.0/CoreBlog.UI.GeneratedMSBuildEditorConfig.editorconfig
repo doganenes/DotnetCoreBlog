@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/casper/Desktop/projects/.NET Full Stack/DotNet/API/DotnetCoreProjeKampi/CoreBlog/CoreBlog.UI/Views/Blog/BlogDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/casper/Desktop/projects/.NET Full Stack/DotNet/API/DotnetCoreProjeKampi/CoreBlog/CoreBlog.UI/Views/Blog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
