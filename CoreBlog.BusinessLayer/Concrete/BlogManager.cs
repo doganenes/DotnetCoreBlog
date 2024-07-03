@@ -28,6 +28,11 @@ namespace CoreBlog.BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public List<Blog> GetBlogById(int id)
+        {
+            return _blogDal.GetListAll(x => x.BlogID == id);
+        }
+
         public List<Blog> GetAllBlogs()
         {
             return _blogDal.GetListAll();

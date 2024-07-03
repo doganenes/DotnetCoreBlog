@@ -24,11 +24,11 @@ namespace CoreBlog.DataAccessLayer.Migrations
 
             modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.About", b =>
                 {
-                    b.Property<int>("AboutId")
+                    b.Property<int>("AboutID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AboutId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AboutID"));
 
                     b.Property<string>("AboutDetails1")
                         .IsRequired()
@@ -53,18 +53,18 @@ namespace CoreBlog.DataAccessLayer.Migrations
                     b.Property<bool>("AboutStatus")
                         .HasColumnType("bit");
 
-                    b.HasKey("AboutId");
+                    b.HasKey("AboutID");
 
                     b.ToTable("Abouts");
                 });
 
             modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Blog", b =>
                 {
-                    b.Property<int>("BlogId")
+                    b.Property<int>("BlogID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BlogId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BlogID"));
 
                     b.Property<string>("BlogContent")
                         .IsRequired()
@@ -91,7 +91,7 @@ namespace CoreBlog.DataAccessLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("BlogId");
+                    b.HasKey("BlogID");
 
                     b.HasIndex("CategoryID");
 
@@ -100,11 +100,11 @@ namespace CoreBlog.DataAccessLayer.Migrations
 
             modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Category", b =>
                 {
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("CategoryID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryID"));
 
                     b.Property<string>("CategoryDescription")
                         .IsRequired()
@@ -117,20 +117,20 @@ namespace CoreBlog.DataAccessLayer.Migrations
                     b.Property<bool>("CategoryStatus")
                         .HasColumnType("bit");
 
-                    b.HasKey("CategoryId");
+                    b.HasKey("CategoryID");
 
                     b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Comment", b =>
                 {
-                    b.Property<int>("CommentId")
+                    b.Property<int>("CommentID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentID"));
 
-                    b.Property<int>("BlogId")
+                    b.Property<int>("BlogID")
                         .HasColumnType("int");
 
                     b.Property<string>("CommentContent")
@@ -147,23 +147,24 @@ namespace CoreBlog.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CommentUserName")
-                        .HasColumnType("int");
+                    b.Property<string>("CommentUserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CommentId");
+                    b.HasKey("CommentID");
 
-                    b.HasIndex("BlogId");
+                    b.HasIndex("BlogID");
 
                     b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Contact", b =>
                 {
-                    b.Property<int>("ContactId")
+                    b.Property<int>("ContactID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContactId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContactID"));
 
                     b.Property<DateTime>("ContactDate")
                         .HasColumnType("datetime2");
@@ -187,18 +188,18 @@ namespace CoreBlog.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ContactId");
+                    b.HasKey("ContactID");
 
                     b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Writer", b =>
                 {
-                    b.Property<int>("WriterId")
+                    b.Property<int>("WriterID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WriterId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WriterID"));
 
                     b.Property<string>("WriterAbout")
                         .IsRequired()
@@ -223,7 +224,7 @@ namespace CoreBlog.DataAccessLayer.Migrations
                     b.Property<bool>("WriterStatus")
                         .HasColumnType("bit");
 
-                    b.HasKey("WriterId");
+                    b.HasKey("WriterID");
 
                     b.ToTable("Writers");
                 });
@@ -243,7 +244,7 @@ namespace CoreBlog.DataAccessLayer.Migrations
                 {
                     b.HasOne("CoreBlog.EntityLayer.Concrete.Blog", "Blog")
                         .WithMany("Comments")
-                        .HasForeignKey("BlogId")
+                        .HasForeignKey("BlogID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

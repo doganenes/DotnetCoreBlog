@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CoreBlog.DataAccessLayer.Concrete
 {
-    public class Context: DbContext
+    public class Context : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
