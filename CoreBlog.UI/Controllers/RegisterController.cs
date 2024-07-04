@@ -24,10 +24,22 @@ namespace CoreBlog.UI.Controllers
         {
             WriterValidator wv = new WriterValidator();
             ValidationResult results = wv.Validate(w);
-            w.WriterStatus = true;
-            w.WriterAbout = "Deneme";
-            wm.WriterAdd(w);
-            return RedirectToAction("Index" , "Blog");
+            if (results.IsValid)
+            {
+                w.WriterStatus = true;
+                w.WriterAbout = "Deneme";
+                wm.WriterAdd(w);
+                return RedirectToAction("Index", "Blog");
+            }
+            else
+            {
+                foreach(var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName,item.ErrorMessage);
+                }
+            
+            }
+            return View();
         }
 
     }
