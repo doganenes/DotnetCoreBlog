@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoreBlog.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20240703084941_mig_9")]
-    partial class mig_9
+    [Migration("20240704230713_mig_1")]
+    partial class mig_1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -94,9 +94,14 @@ namespace CoreBlog.DataAccessLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("WriterID")
+                        .HasColumnType("int");
+
                     b.HasKey("BlogID");
 
                     b.HasIndex("CategoryID");
+
+                    b.HasIndex("WriterID");
 
                     b.ToTable("Blogs");
                 });
@@ -133,7 +138,7 @@ namespace CoreBlog.DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentID"));
 
-                    b.Property<int>("BlogId")
+                    b.Property<int>("BlogID")
                         .HasColumnType("int");
 
                     b.Property<string>("CommentContent")
@@ -156,7 +161,7 @@ namespace CoreBlog.DataAccessLayer.Migrations
 
                     b.HasKey("CommentID");
 
-                    b.HasIndex("BlogId");
+                    b.HasIndex("BlogID");
 
                     b.ToTable("Comments");
                 });
@@ -240,14 +245,22 @@ namespace CoreBlog.DataAccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("CoreBlog.EntityLayer.Concrete.Writer", "Writer")
+                        .WithMany("Blogs")
+                        .HasForeignKey("WriterID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Category");
+
+                    b.Navigation("Writer");
                 });
 
             modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Comment", b =>
                 {
                     b.HasOne("CoreBlog.EntityLayer.Concrete.Blog", "Blog")
                         .WithMany("Comments")
-                        .HasForeignKey("BlogId")
+                        .HasForeignKey("BlogID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -260,6 +273,11 @@ namespace CoreBlog.DataAccessLayer.Migrations
                 });
 
             modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Category", b =>
+                {
+                    b.Navigation("Blogs");
+                });
+
+            modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Writer", b =>
                 {
                     b.Navigation("Blogs");
                 });

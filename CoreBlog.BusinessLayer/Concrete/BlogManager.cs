@@ -1,6 +1,7 @@
 ﻿using CoreBlog.BusinessLayer.Abstract;
 using CoreBlog.DataAccessLayer.Abstract;
 using CoreBlog.EntityLayer.Concrete;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,5 +53,10 @@ namespace CoreBlog.BusinessLayer.Concrete
         {
              _blogDal.Update(blog);
         }
-    }
+
+		public List<Blog> GetBlogListWithWriter(int id)
+		{
+			throw new NotImplementedException();
+		}
+	}
 }

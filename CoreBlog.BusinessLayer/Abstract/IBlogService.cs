@@ -15,5 +15,6 @@ namespace CoreBlog.BusinessLayer.Abstract
         List<Blog> GetAllBlogs();
         Blog GetById(int id);
         List<Blog> GetBlogListWithCategory();
+        List<Blog> GetBlogListWithWriter(int id);
     }
 }

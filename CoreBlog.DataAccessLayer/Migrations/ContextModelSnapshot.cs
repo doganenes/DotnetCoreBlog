@@ -91,9 +91,14 @@ namespace CoreBlog.DataAccessLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("WriterID")
+                        .HasColumnType("int");
+
                     b.HasKey("BlogID");
 
                     b.HasIndex("CategoryID");
+
+                    b.HasIndex("WriterID");
 
                     b.ToTable("Blogs");
                 });
@@ -237,7 +242,15 @@ namespace CoreBlog.DataAccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("CoreBlog.EntityLayer.Concrete.Writer", "Writer")
+                        .WithMany("Blogs")
+                        .HasForeignKey("WriterID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Category");
+
+                    b.Navigation("Writer");
                 });
 
             modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Comment", b =>
@@ -257,6 +270,11 @@ namespace CoreBlog.DataAccessLayer.Migrations
                 });
 
             modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Category", b =>
+                {
+                    b.Navigation("Blogs");
+                });
+
+            modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Writer", b =>
                 {
                     b.Navigation("Blogs");
                 });
