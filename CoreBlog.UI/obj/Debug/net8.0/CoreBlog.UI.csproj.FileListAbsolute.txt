@@ -257,3 +257,7 @@ C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Debug\net8.0\CoreBlog.UI.MvcApplicationPartsAssemblyInfo.cs
