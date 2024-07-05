@@ -16,7 +16,7 @@ namespace CoreBlog.BusinessLayer.Concrete
         public CommentManager(ICommentDal commentDal)
         {
             _commentDal = commentDal;
-        }
+        }   
 
         public void CommentAdd(Comment comment)
         {

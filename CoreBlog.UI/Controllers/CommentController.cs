@@ -1,5 +1,6 @@
 ﻿using CoreBlog.BusinessLayer.Concrete;
 using CoreBlog.DataAccessLayer.EntityFramework;
+using CoreBlog.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlog.UI.Controllers
@@ -12,13 +13,23 @@ namespace CoreBlog.UI.Controllers
             return View();
         }
 
-
+        [HttpGet]
         public PartialViewResult PartialAddComment()
         {
             return PartialView();
         }
 
-        public PartialViewResult CommentListByBlog(int id)
+        [HttpPost]
+        public PartialViewResult PartialAddComment(Comment p)
+        {
+            p.CommentDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+            p.CommentStatus = true;
+            p.BlogID = 7;
+            cm.CommentAdd(p);
+            return PartialView();
+        }
+
+            public PartialViewResult CommentListByBlog(int id)
         {
             var values = cm.GetList(id);
             return PartialView(values);

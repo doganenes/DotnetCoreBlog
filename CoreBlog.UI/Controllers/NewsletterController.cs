@@ -1,10 +1,14 @@
-﻿using CoreBlog.EntityLayer.Concrete;
+﻿using CoreBlog.BusinessLayer.Concrete;
+using CoreBlog.DataAccessLayer.EntityFramework;
+using CoreBlog.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlog.UI.Controllers
 {
     public class NewsletterController : Controller
     {
+        NewsletterManager nm = new NewsletterManager(new EfNewsletterRepository());
+
         [HttpGet]
         public PartialViewResult SubscribeMail()
         {
@@ -14,6 +18,8 @@ namespace CoreBlog.UI.Controllers
         [HttpPost]
         public PartialViewResult SubscribeMail(Newsletter p)
         {
+            p.MailStatus = true;
+            nm.AddNewsletter(p);
             return PartialView();
         }
     }
