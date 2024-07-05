@@ -93,7 +93,7 @@ namespace CoreBlog.DataAccessLayer.Migrations
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BlogStatus = table.Column<bool>(type: "bit", nullable: false),
                     CategoryID = table.Column<int>(type: "int", nullable: false),
-                    WriterID = table.Column<int>(type: "int", nullable: false)
+                    WriterID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {

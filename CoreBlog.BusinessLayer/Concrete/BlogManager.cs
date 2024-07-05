@@ -56,7 +56,7 @@ namespace CoreBlog.BusinessLayer.Concrete
 
 		public List<Blog> GetBlogListWithWriter(int id)
 		{
-			throw new NotImplementedException();
+            return _blogDal.GetListAll(x => x.WriterID == id);
 		}
 	}
 }
