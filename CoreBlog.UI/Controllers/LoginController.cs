@@ -40,17 +40,3 @@ namespace CoreBlog.UI.Controllers
         }
     }
 }
-
-//Context c = new Context();
-//var dataValue = c.Writers.FirstOrDefault(x => x.WriterMail == p.WriterMail && x.WriterPassword == p.WriterPassword);
-
-//if (dataValue != null)
-//{
-//    HttpContext.Session.SetString("username", p.WriterMail);
-//    return RedirectToAction("Index", "Writer");
-//}
-//else
-//{
-
-//    return View();
-//}
