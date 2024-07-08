@@ -1,9 +1,11 @@
 ﻿using CoreBlog.BusinessLayer.Concrete;
 using CoreBlog.DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlog.UI.Controllers
 {
+    [AllowAnonymous]
     public class BlogController : Controller
     {
 
@@ -20,5 +22,6 @@ namespace CoreBlog.UI.Controllers
             var values = bm.GetBlogById(id);
             return View(values);
         }
+
     }
 }
