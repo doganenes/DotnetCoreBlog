@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,8 @@ namespace CoreBlog.EntityLayer.Concrete
 {
 	public class Blog
 	{
-		public int BlogID { get; set; }
+        [Key]
+        public int BlogID { get; set; }
 		public string BlogTitle { get; set; }
 		public string BlogContent { get; set; }
 		public string BlogThumbnailImage { get; set; }

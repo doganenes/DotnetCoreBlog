@@ -1,7 +1,11 @@
 ﻿using CoreBlog.BusinessLayer.Concrete;
+using CoreBlog.BusinessLayer.ValidationRules;
 using CoreBlog.DataAccessLayer.EntityFramework;
+using CoreBlog.EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CoreBlog.UI.Controllers
 {
@@ -23,5 +27,49 @@ namespace CoreBlog.UI.Controllers
             return View(values);
         }
 
+        public IActionResult BlogListByWriter()
+        {
+            var values = bm.GetBlogListWithWriter(1);
+            return View(values);
+        }
+
+        [HttpGet]
+        public IActionResult BlogAdd()
+        {
+            CategoryManager cm = new CategoryManager(new EfCategoryRepository());
+            List<SelectListItem> categoryValues = (from x in cm.GetList()
+                                                   select new SelectListItem
+                                                   {
+                                                       Text = x.CategoryName,
+                                                       Value = x.CategoryID.ToString()
+                                                   }).ToList();
+
+            ViewBag.cv = categoryValues;
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult BlogAdd(Blog p)
+        {
+            BlogValidator wv = new BlogValidator();
+            ValidationResult results = wv.Validate(p);
+            if (results.IsValid)
+            {
+                p.BlogStatus = true;
+                p.CreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+                bm.TAdd(p);
+                return RedirectToAction("BlogListByWriter", "Blog");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+
+            }
+            return View();
+        }
     }
 }

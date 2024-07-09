@@ -19,29 +19,30 @@ namespace CoreBlog.BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
-        public void AddCategory(Category category)
+        public Category GetById(int id)
         {
-            _categoryDal.Insert(category);
+            return _categoryDal.GetById(id);
         }
 
-        public void DeleteCategory(Category category)
-        {
-            _categoryDal.Delete(category);
-        }
-
-        public List<Category> GetAllCatgories()
+        public List<Category> GetList()
         {
             return _categoryDal.GetListAll();
         }
 
-        public Category GetById(int id)
-        {   
-            return _categoryDal.GetById(id);
+        public void TAdd(Category t)
+        {
+            _categoryDal.Insert(t);
         }
 
-        public void UpdateCategory(Category category)
+        public void TDelete(Category t)
         {
-            _categoryDal.Update(category);
+            _categoryDal.Delete(t);
         }
+
+        public void TUpdate(Category t)
+        {
+            _categoryDal.Update(t);
+        }
+
     }
 }

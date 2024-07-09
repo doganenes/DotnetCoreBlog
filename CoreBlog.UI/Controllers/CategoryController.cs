@@ -9,7 +9,7 @@ namespace CoreBlog.UI.Controllers
         CategoryManager categoryManager = new CategoryManager(new EfCategoryRepository());
         public IActionResult Index()
         {
-            var values = categoryManager.GetAllCatgories();
+            var values = categoryManager.GetList();
             return View(values);
         }
     }
