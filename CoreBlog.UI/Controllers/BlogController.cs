@@ -58,6 +58,7 @@ namespace CoreBlog.UI.Controllers
             {
                 p.BlogStatus = true;
                 p.CreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+                p.WriterID = 1;
                 bm.TAdd(p);
                 return RedirectToAction("BlogListByWriter", "Blog");
             }

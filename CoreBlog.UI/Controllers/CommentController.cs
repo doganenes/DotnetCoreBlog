@@ -24,7 +24,7 @@ namespace CoreBlog.UI.Controllers
         {
             p.CommentDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             p.CommentStatus = true;
-            p.BlogID = 7;
+            p.BlogID = 5;
             cm.CommentAdd(p);
             return PartialView();
         }
