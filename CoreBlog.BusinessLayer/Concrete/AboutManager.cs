@@ -18,12 +18,12 @@ namespace CoreBlog.BusinessLayer.Concrete
             _aboutDal = aboutDal;
         }
 
-        public About GetById(int id)
+        public About TGetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<About> GetList()
+        public List<About> TGetList()
         {
             return _aboutDal.GetListAll();
         }

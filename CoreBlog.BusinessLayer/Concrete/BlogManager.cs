@@ -39,7 +39,12 @@ namespace CoreBlog.BusinessLayer.Concrete
             return _blogDal.GetListWithCategory();
         }
 
-        public Blog GetById(int id)
+        public List<Blog> GetListWithCategoryByWriterBm(int id)
+        {
+            return _blogDal.GetListWithCategoryByWriter(id);
+        }
+
+        public Blog TGetById(int id)
         {
             return _blogDal.GetById(id);
         }
@@ -64,7 +69,7 @@ namespace CoreBlog.BusinessLayer.Concrete
             _blogDal.Update(t);
         }
 
-        public List<Blog> GetList()
+        public List<Blog> TGetList()
         {
             return _blogDal.GetListAll();
         }

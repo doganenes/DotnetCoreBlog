@@ -29,7 +29,7 @@ namespace CoreBlog.UI.Controllers
 
         public IActionResult BlogListByWriter()
         {
-            var values = bm.GetBlogListWithWriter(1);
+            var values = bm.GetListWithCategoryByWriterBm(1);
             return View(values);
         }
 
@@ -37,7 +37,7 @@ namespace CoreBlog.UI.Controllers
         public IActionResult BlogAdd()
         {
             CategoryManager cm = new CategoryManager(new EfCategoryRepository());
-            List<SelectListItem> categoryValues = (from x in cm.GetList()
+            List<SelectListItem> categoryValues = (from x in cm.TGetList()
                                                    select new SelectListItem
                                                    {
                                                        Text = x.CategoryName,
@@ -71,6 +71,13 @@ namespace CoreBlog.UI.Controllers
 
             }
             return View();
+        }
+
+        public IActionResult DeleteBlog(int id) {
+
+            var blogValue = bm.TGetById(id);
+            bm.TDelete(blogValue);
+            return RedirectToAction("BlogListByWriter");
         }
     }
 }
