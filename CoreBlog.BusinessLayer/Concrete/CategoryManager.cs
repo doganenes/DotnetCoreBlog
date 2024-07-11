@@ -43,6 +43,5 @@ namespace CoreBlog.BusinessLayer.Concrete
         {
             _categoryDal.Update(t);
         }
-
     }
 }
