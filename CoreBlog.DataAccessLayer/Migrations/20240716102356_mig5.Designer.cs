@@ -4,6 +4,7 @@ using CoreBlog.DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoreBlog.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20240716102356_mig5")]
+    partial class mig5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -219,28 +222,6 @@ namespace CoreBlog.DataAccessLayer.Migrations
                     b.HasKey("MailID");
 
                     b.ToTable("Newsletters");
-                });
-
-            modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Rating", b =>
-                {
-                    b.Property<int>("RatingID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RatingID"));
-
-                    b.Property<int>("BlogID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RatingCount")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TotalScore")
-                        .HasColumnType("int");
-
-                    b.HasKey("RatingID");
-
-                    b.ToTable("Ratings");
                 });
 
             modelBuilder.Entity("CoreBlog.EntityLayer.Concrete.Writer", b =>
