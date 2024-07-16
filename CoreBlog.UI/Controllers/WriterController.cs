@@ -1,10 +1,14 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using CoreBlog.BusinessLayer.Concrete;
+using CoreBlog.DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlog.UI.Controllers
 {
     public class WriterController : Controller
     {
+        WriterManager wm = new WriterManager(new EfWriterRepository());
+
         [AllowAnonymous]
         public IActionResult Index()
         {
@@ -37,6 +41,13 @@ namespace CoreBlog.UI.Controllers
         public PartialViewResult WriterFooterPartial()
         {
             return PartialView();
+        }
+
+        [AllowAnonymous]
+        public IActionResult WriterEditProfile()
+        {
+            var writerValues = wm.TGetById(1);
+            return View(writerValues);
         }
     }
 }
