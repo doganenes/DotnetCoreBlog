@@ -1,12 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CoreBlog.BusinessLayer.Concrete;
+using CoreBlog.DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlog.UI.ViewComponents.Writer
 {
     public class WriterNotification : ViewComponent
     {
+        NotificationManager nm = new NotificationManager(new EfNotificationRepository());
+
         public IViewComponentResult Invoke()
         {
-            return View();
+            var values = nm.TGetList();
+            return View(values);
         }
     }
 }

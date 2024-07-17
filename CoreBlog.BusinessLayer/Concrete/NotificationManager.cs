@@ -35,7 +35,7 @@ namespace CoreBlog.BusinessLayer.Concrete
 
         public List<Notification> TGetList()
         {
-            throw new NotImplementedException();
+            return _notificationDal.GetListAll();
         }
 
         public void TUpdate(Notification t)
