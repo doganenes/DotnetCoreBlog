@@ -23,5 +23,6 @@ namespace CoreBlog.DataAccessLayer.Concrete
         public DbSet<Writer> Writers { get; set; }
         public DbSet<Newsletter> Newsletters { get; set; }
         public DbSet<Rating> Ratings {  get; set; }
+        public DbSet<Notification> Notifications { get; set; }
     }
 }

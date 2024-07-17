@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CoreBlog.EntityLayer.Concrete
+namespace CoreBlog.UI.Models
 {
-    public class Writer
+    public class AddProfileImage
     {
-        [Key]
         public int WriterID { get; set; }
         public string WriterName { get; set; }
         public string WriterAbout { get; set; }
-        public string? WriterImage { get; set; }
+        public IFormFile WriterImage { get; set; }
         public string WriterMail { get; set; }
         public string WriterPassword { get; set; }
         public bool WriterStatus { get; set; }
-        public List<Blog> Blogs { get; set; }
     }
 }
