@@ -13,14 +13,23 @@ namespace CoreBlog.DataAccessLayer.Concrete
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("server=ENES\\SQLEXPRESS;database=CoreBlogDB;TrustServerCertificate=true;Trusted_Connection=true");
-        }   
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Match>().HasOne(x => x.HomeTeam).WithMany(y => y.HomeMatches).HasForeignKey(z => z.HomeTeamID).OnDelete(DeleteBehavior.ClientSetNull);
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Match>().HasOne(x => x.GuestTeam).WithMany(y => y.AwayMatches).HasForeignKey(z => z.GuestTeamID).OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<Message2>().HasOne(x => x.SenderUser).WithMany(y => y.WriterSender).HasForeignKey(z => z.SenderID).OnDelete(DeleteBehavior.ClientSetNull);
+
+            modelBuilder.Entity<Message2>().HasOne(x => x.ReceiverUser).WithMany(y => y.WriterReceiver).HasForeignKey(z => z.ReceiverID).OnDelete(DeleteBehavior.ClientSetNull);
         }
+
+        // HomeMatches => WriterSender
+        // AwaySender => WriterReceiver
+        // HomeTeam => SenderUser
+        // AwayTeam => ReceiverUser
 
         public DbSet<About> Abouts { get; set; }
         public DbSet<Blog> Blogs { get; set; }
@@ -34,5 +43,6 @@ namespace CoreBlog.DataAccessLayer.Concrete
         public DbSet<Message> Messages { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Match> Matches { get; set; }
+        public DbSet<Message2> Message2s { get; set; }
     }
 }
