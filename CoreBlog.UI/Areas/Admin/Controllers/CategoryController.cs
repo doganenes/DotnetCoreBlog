@@ -1,13 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CoreBlog.BusinessLayer.Concrete;
+using CoreBlog.DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlog.UI.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
-        [Area("Admin")]
+
+        CategoryManager cm = new CategoryManager(new EfCategoryRepository());
         public IActionResult Index()
         {
-            return View();
+            var values = cm.TGetList();
+            return View(values);
         }
     }
 }
