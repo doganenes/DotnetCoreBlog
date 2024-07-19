@@ -12,8 +12,7 @@ namespace CoreBlog.UI.Controllers
     public class WriterController : Controller
     {
         WriterManager wm = new WriterManager(new EfWriterRepository());
-
-        [AllowAnonymous]
+        [Authorize]
         public IActionResult Index()
         {
             return View();

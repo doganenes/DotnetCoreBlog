@@ -25,7 +25,7 @@ namespace CoreBlog.BusinessLayer.Concrete
 
         public void TAdd(Message2 t)
         {
-            throw new NotImplementedException();
+            _message2Dal.Insert(t);
         }
 
         public void TDelete(Message2 t)
@@ -45,7 +45,7 @@ namespace CoreBlog.BusinessLayer.Concrete
 
         public void TUpdate(Message2 t)
         {
-            throw new NotImplementedException();
+            _message2Dal.Update(t);
         }
     }
 }
