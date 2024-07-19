@@ -13,6 +13,8 @@ namespace CoreBlog.UI.Controllers
     public class WriterController : Controller
     {
         WriterManager wm = new WriterManager(new EfWriterRepository());
+        Context c = new Context();
+
         [Authorize]
         public IActionResult Index()
         {
@@ -52,15 +54,16 @@ namespace CoreBlog.UI.Controllers
             return PartialView();
         }
 
-        [AllowAnonymous]
         [HttpGet]
         public IActionResult WriterEditProfile()
         {
-            var writerValues = wm.TGetById(1);
+            var usermail = User.Identity.Name;
+            var writerID = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
+            var values = wm.GetWriterById(writerID);
+            var writerValues = wm.TGetById(writerID);
             return View(writerValues);
         }
 
-        [AllowAnonymous]
         [HttpPost]
         public IActionResult WriterEditProfile(Writer p)
         {
