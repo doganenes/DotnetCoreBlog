@@ -1,5 +1,6 @@
 ﻿using CoreBlog.BusinessLayer.Concrete;
 using CoreBlog.BusinessLayer.ValidationRules;
+using CoreBlog.DataAccessLayer.Concrete;
 using CoreBlog.DataAccessLayer.EntityFramework;
 using CoreBlog.EntityLayer.Concrete;
 using CoreBlog.UI.Models;
@@ -15,6 +16,11 @@ namespace CoreBlog.UI.Controllers
         [Authorize]
         public IActionResult Index()
         {
+            var usermail = User.Identity.Name;
+            ViewBag.v = usermail;
+            Context c = new Context();
+            var writerName = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterName).FirstOrDefault();
+            ViewBag.v2 = writerName;
             return View();
         }
 
