@@ -298,6 +298,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.102.3, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.9.2, )"
