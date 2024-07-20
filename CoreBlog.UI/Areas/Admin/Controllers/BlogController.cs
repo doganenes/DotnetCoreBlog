@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlog.UI.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class BlogController : Controller
     {
         public IActionResult ExportStaticExcelBlogList()
@@ -39,6 +40,11 @@ namespace CoreBlog.UI.Areas.Admin.Controllers
 
             };
             return bm;
+        }
+
+        public IActionResult BlogListExcel()
+        {
+            return View();
         }
     }
 }

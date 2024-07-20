@@ -263,3 +263,10 @@ C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Debug\net8.0\CoreBlog.UI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\X.PagedList.dll
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\ClosedXML.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\ExcelNumberFormat.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\Irony.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\SixLabors.Fonts.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\XLParser.dll
