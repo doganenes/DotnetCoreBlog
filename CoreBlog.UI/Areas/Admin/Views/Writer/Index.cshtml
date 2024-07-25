@@ -9,3 +9,20 @@
 <button type="button" id="btnGetList" class="btn btn-outline-primary">Yazar Listesi</button>
 <br/><br/>
 <div id="writerList">buraya yazarlar gelecek</div>
+
+@section scripts{
+    <script>
+        $("#btnGetList").click(function () {
+            $.ajax({
+                contentType:"application/json",
+                dataType : "json",
+                type: "Get",
+                url : "Admin/Writer/WriterList/",
+                success : function(func){
+                let w = jQuery.parseJSON(func)
+                    console.log(w);
+                }
+            })
+        })
+    </script>
+}
