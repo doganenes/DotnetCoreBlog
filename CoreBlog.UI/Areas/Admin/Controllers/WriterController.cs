@@ -1,12 +1,43 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CoreBlog.UI.Areas.Admin.Models;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace CoreBlog.UI.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class WriterController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
+
+        public IActionResult WriterList()
+        {
+            var jsonwriters = JsonConvert.SerializeObject(writers);
+            return Json(jsonwriters);
+        }
+
+        public static List<WriterClass> writers = new List<WriterClass>
+        {
+            new WriterClass
+            {
+                Id = 1,
+                Name="Ayşe"
+            },
+            new WriterClass
+            {
+                Id = 2,
+                Name = "Elif"
+            },
+
+            new WriterClass
+            {
+                Id = 3,
+                Name = "Enes"
+            }
+
+        };
+
     }
 }
