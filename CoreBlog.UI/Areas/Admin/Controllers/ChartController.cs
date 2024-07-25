@@ -10,7 +10,6 @@ namespace CoreBlog.UI.Areas.Admin.Controllers
         {
             return View();
         }
-
         public IActionResult CategoryChart()
         {
             List<CategoryClass> list = new List<CategoryClass>();
