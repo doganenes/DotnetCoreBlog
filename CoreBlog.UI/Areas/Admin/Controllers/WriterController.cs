@@ -1,6 +1,6 @@
 ﻿using CoreBlog.UI.Areas.Admin.Models;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace CoreBlog.UI.Areas.Admin.Controllers
 {
@@ -14,30 +14,26 @@ namespace CoreBlog.UI.Areas.Admin.Controllers
 
         public IActionResult WriterList()
         {
-            var jsonwriters = JsonConvert.SerializeObject(writers);
-            return Json(jsonwriters);
+            return Json(writers);
         }
 
         public static List<WriterClass> writers = new List<WriterClass>
         {
             new WriterClass
             {
-                Id = 1,
+                ID = 1,
                 Name="Ayşe"
             },
             new WriterClass
             {
-                Id = 2,
+                ID = 2,
                 Name = "Elif"
             },
-
             new WriterClass
             {
-                Id = 3,
+                ID= 3,
                 Name = "Enes"
             }
-
         };
-
     }
 }
