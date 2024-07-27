@@ -8,13 +8,20 @@
 
 <button type="button" id="btnGetList" class="btn btn-outline-primary">Yazar Listesi</button>
 <button type="button" id="btnGetByID" class="btn btn-outline-success">Yazar Getir</button>
+<button type="button" id="btnAddWriter" class="btn btn-outline-info">Yazar Ekle</button>
 <br />
 <br />
 <div id="writerList">buraya yazarlar gelecek</div>
 <div id="writerGet">buraya bir yazar gelecek</div>
+<br />
 <div>
     <input type="text" id="writerID" placeholder="Yazar ID Değerini girin" class="form-control" />
+</div>
+<br />
 
+<div>
+    <input type="text" class="form-control" id="txtWriterID" placeholder="Yazar ID" />
+    <input type="text" class="form-control" id="txtWriterName" placeholder="Yazar Adı" />
 </div>
 
 @section scripts {
@@ -38,7 +45,7 @@
             });
         });
 
-            ${ "btnGetByID" }.click(x => {
+                            ${ "btnGetByID" }.click(x => {
             let id = $("#writerID").val();
             $.ajax({
                 contentType: "application/json",
@@ -58,9 +65,28 @@
 
                 $("writerGet").html(getValue);
             })
-                        }
-                     })
-                 })
+          }
+   })
+ })
+
+        $("#btnAddWriter").click(function () {
+
+            let writer = {
+                Id: $("txtWriterID").val(),
+                Name: $("txtWriterName").val()
+            };
+
+            $.ajax({
+                type: "post",
+                url: "/Admin/Writer/AddWriter",
+                data: writer,
+                success: function(func){
+                    let result = jQuery.parseJSON(func);
+                    alert("Yazar ekleme işlemi başarılı bir şekilde gerçekleşti");
+                }
+            })
+        });
+
     </script>
 }
 

@@ -25,6 +25,14 @@ namespace CoreBlog.UI.Areas.Admin.Controllers
             return Json(jsonWriters);
         }
 
+        [HttpPost]
+        public IActionResult AddWriter(WriterClass w)
+        {
+            writers.Add(w);
+            var jsonwriters = JsonConvert.SerializeObject(writers);
+            return Json(jsonwriters);
+        }
+
         public static List<WriterClass> writers = new List<WriterClass>
         {
             new WriterClass
