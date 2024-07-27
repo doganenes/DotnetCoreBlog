@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "jJ8xLjWGWz7Dxe87BsLwsDcisj2uqyVJYv9HhzoXvqo=",
+  "Source": "CoreBlog.API",
+  "BasePath": "_content/CoreBlog.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
