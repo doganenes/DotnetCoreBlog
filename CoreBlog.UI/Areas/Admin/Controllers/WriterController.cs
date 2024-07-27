@@ -29,8 +29,24 @@ namespace CoreBlog.UI.Areas.Admin.Controllers
         public IActionResult AddWriter(WriterClass w)
         {
             writers.Add(w);
-            var jsonwriters = JsonConvert.SerializeObject(writers);
+            var jsonwriters = JsonConvert.SerializeObject(w);
             return Json(jsonwriters);
+        }
+
+        public IActionResult DeleteWriter(int id)
+        {
+            var writer = writers.FirstOrDefault(x => x.ID
+             == id);
+            writers.Remove(writer);
+            return Json(writer);
+        }
+
+        public IActionResult UpdateWriter(WriterClass w)
+        {
+            var writer = writers.FirstOrDefault(x => x.ID == w.ID);
+            writer.Name = w.Name;
+            var jsonWriter = JsonConvert.SerializeObject(w);
+            return Json(jsonWriter);
         }
 
         public static List<WriterClass> writers = new List<WriterClass>
