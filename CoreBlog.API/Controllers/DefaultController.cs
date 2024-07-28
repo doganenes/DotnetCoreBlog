@@ -1,4 +1,5 @@
 ﻿using CoreBlog.API.DataAccessLayer;
+using CoreBlog.API.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,8 +18,11 @@ namespace CoreBlog.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult EmployeeAdd()
+        public IActionResult EmployeeAdd(Employee e)
         {
+            using var c = new Context();
+            c.Add(e);
+            c.SaveChanges();
             return Ok();
         }
     }
