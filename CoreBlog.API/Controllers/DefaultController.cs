@@ -16,5 +16,10 @@ namespace CoreBlog.API.Controllers
             return Ok(values);
         }
 
+        [HttpPost]
+        public IActionResult EmployeeAdd()
+        {
+            return Ok();
+        }
     }
 }
