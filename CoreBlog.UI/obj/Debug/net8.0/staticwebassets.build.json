@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "0UtQtFKmE77ElaafxRBzf89dlKGdqzsvWIiU8o6xg/E=",
+  "Hash": "tf/Cto+l6QdAZPYOTHefRe4GQS5422QzaR5SKPRntQU=",
   "Source": "CoreBlog.UI",
   "BasePath": "_content/CoreBlog.UI",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\casper\\Desktop\\projects\\.NET Full Stack\\DotNet\\API\\DotnetCoreProjeKampi\\CoreBlog\\CoreBlog.API\\CoreBlog.API.csproj",
+      "Version": 2,
+      "Source": "CoreBlog.API",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "CoreBlog.UI\\wwwroot",

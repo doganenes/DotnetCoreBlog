@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoreBlog.CoreLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95075eccd2343d258f4660706c577f991526425e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1afde57b2d004fb8565820cce22356fde0a667bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("CoreBlog.CoreLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CoreBlog.CoreLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
