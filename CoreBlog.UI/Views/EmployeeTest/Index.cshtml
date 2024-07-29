@@ -1,8 +1,21 @@
-﻿
+﻿@using CoreBlog.UI.Controllers
+@model List<Class1>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<h1>Index</h1>
-
+<table>
+    <tr>
+        <th>#</th>
+        <th>Adı Soyadı</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+        </tr>
+    }
+</table>
