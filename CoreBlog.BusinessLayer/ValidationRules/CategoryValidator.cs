@@ -15,7 +15,6 @@ namespace CoreBlog.BusinessLayer.ValidationRules
             RuleFor(x => x.CategoryName).NotEmpty().WithMessage("Kategori adı boş geçilemez!");
             RuleFor(x => x.CategoryDescription).NotEmpty().WithMessage("Kategori açıklaması boş geçilemez!");
             RuleFor(x => x.CategoryName).MaximumLength(50).MinimumLength(2).WithMessage("Kategori adı minimum 2 maksimum 50 karakter olabilir!");
-
         }
     }
 }

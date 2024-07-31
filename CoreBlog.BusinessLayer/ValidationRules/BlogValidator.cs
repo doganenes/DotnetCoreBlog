@@ -17,7 +17,6 @@ namespace CoreBlog.BusinessLayer.ValidationRules
             RuleFor(x => x.BlogTitle).MaximumLength(150).WithMessage("Lütfen 150 karakterden daha az veri girişi yapın");
             RuleFor(x => x.BlogTitle).MinimumLength(4).WithMessage("Lütfen 5 karakterden daha fazla veri girişi yapın");
 
-
         }
 
     }
