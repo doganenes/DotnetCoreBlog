@@ -25,7 +25,6 @@ namespace CoreBlog.UI.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous]
         public async Task<IActionResult> Index(UserSigninViewModel p)
         {
             if (ModelState.IsValid)
