@@ -34,7 +34,8 @@ namespace CoreBlog.UI.Controllers
 
         public IActionResult BlogListByWriter()
         {
-            var usermail = User.Identity.Name;
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
             var writerID = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
             var values = bm.GetListWithCategoryByWriterBm(writerID);
             return View(values);
@@ -58,13 +59,15 @@ namespace CoreBlog.UI.Controllers
         [HttpPost]
         public IActionResult BlogAdd(Blog p)
         {
-            BlogValidator wv = new BlogValidator();
-            var usermail = User.Identity.Name;
+
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
             var writerID = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
+
+            BlogValidator wv = new BlogValidator();
             ValidationResult results = wv.Validate(p);
             if (results.IsValid)
             {
-
                 p.BlogStatus = true;
                 p.CreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 p.WriterID = writerID;
@@ -84,7 +87,6 @@ namespace CoreBlog.UI.Controllers
 
         public IActionResult DeleteBlog(int id)
         {
-
             var blogValue = bm.TGetById(id);
             bm.TDelete(blogValue);
             return RedirectToAction("BlogListByWriter");
@@ -93,6 +95,7 @@ namespace CoreBlog.UI.Controllers
         [HttpGet]
         public IActionResult EditBlog(int id)
         {
+
             var blogValue = bm.TGetById(id);
             List<SelectListItem> categoryValues = (from x in cm.TGetList()
                                                    select new SelectListItem
@@ -108,14 +111,15 @@ namespace CoreBlog.UI.Controllers
         [HttpPost]
         public IActionResult EditBlog(Blog p)
         {
-            var usermail = User.Identity.Name;
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
             var writerID = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
+
             p.WriterID = writerID;
             p.CreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             p.BlogStatus = true;
             bm.TUpdate(p);
             return RedirectToAction("BlogListByWriter");
         }
-
     }
 }
