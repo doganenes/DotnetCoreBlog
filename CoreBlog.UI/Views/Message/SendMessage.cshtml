@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/WriterLayout.cshtml";
 }
 
-<h1>Mesaj Gönder</h1>
+<h1>Yeni Mesaj Oluşturma</h1>
 
 @using (Html.BeginForm("SendMessage", "Message", FormMethod.Post))
 {
@@ -15,11 +15,9 @@
     <br />
     @Html.Label("Konu")
     @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.BlogImage)
     <br/>
     @Html.Label("Mesajınız")
     @Html.TextAreaFor(x => x.MessageDetails, 15, 3, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.BlogContent)
     <br />
     <button class="btn btn-info">Mesajı Gönder</button>
 }

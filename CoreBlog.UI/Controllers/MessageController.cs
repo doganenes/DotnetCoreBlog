@@ -24,6 +24,16 @@ namespace CoreBlog.UI.Controllers
             return View(values);
         }
 
+        public IActionResult SendBox()
+        {
+            var username = User.Identity.Name;
+            var usermail = c.Users.Where(x => x.UserName == username).Select(y => y.Email).FirstOrDefault();
+            var writerID = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
+            var values = message2Manager.GetSendBoxListByWriter(writerID);
+            return View(values);
+        }
+
+
         public IActionResult MessageDetails(int id)
         {
             var blogValue = message2Manager.TGetById(id);
