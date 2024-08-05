@@ -20,9 +20,9 @@ namespace CoreBlog.UI.ViewComponents.Writer
             _userManager = userManager;
         }
 
-        public async Task<IViewComponentResult> Invoke()
+        public IViewComponentResult Invoke()
         {
-            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            var user =  _userManager.FindByNameAsync(User.Identity.Name);
                 
             var username = User.Identity.Name;
             ViewBag.v = username;
