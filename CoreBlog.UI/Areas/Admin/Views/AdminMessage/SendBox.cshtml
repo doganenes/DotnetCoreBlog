@@ -1,11 +1,11 @@
 ﻿@using CoreBlog.EntityLayer.Concrete
 @model List<Message2>
 
-
 @{
-    ViewData["Title"] = "Inbox";
+    ViewData["Title"] = "SendBox";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
+
 <body>
     <div class="wrapper wrapper-content">
         <div class="row">
@@ -17,11 +17,11 @@
                             <div class="space-25"></div>
                             <h5>Klasörler</h5>
                             <ul class="folder-list m-b-md" style="padding: 0">
-                                <li><a href="Admin/AdminMessage/InBox"> <i class="fa fa-inbox "></i> Gelen Mesajlar <span class="label label-warning float-right">16</span> </a></li>
-                                <li><a href="Admin/AdminMessage/SendBox"> <i class="fa fa-envelope-o"></i> Giden Mesajlar</a></li>
-                                <li><a href="mailbox.html"> <i class="fa fa-certificate"></i> Important</a></li>
-                                <li><a href="mailbox.html"> <i class="fa fa-file-text-o"></i> Drafts <span class="label label-danger float-right">2</span></a></li>
-                                <li><a href="mailbox.html"> <i class="fa fa-trash-o"></i> Trash</a></li>
+                                <li><a href="mailbox.html"> <i class="fa fa-inbox "></i> Inbox <span class="label label-warning float-right">16</span> </a></li>
+                                <li><a href="mailbox.html"> <i class="fa fa-envelope-o"></i> Mesaj Gönder</a></li>
+                                <li><a href="mailbox.html"> <i class="fa fa-certificate"></i> Önemli</a></li>
+                                <li><a href="mailbox.html"> <i class="fa fa-file-text-o"></i> Taslaklar <span class="label label-danger float-right">2</span></a></li>
+                                <li><a href="mailbox.html"> <i class="fa fa-trash-o"></i> Çöp</a></li>
                             </ul>
                             <h5>Categories</h5>
                             <ul class="category-list" style="padding: 0">
@@ -62,7 +62,7 @@
                         </div>
                     </form>
                     <h2>
-                        Gelen Kutusu (0)
+                        Giden Kutusu (0)
                     </h2>
                     <div class="mail-tools tooltip-demo m-t-md">
                         <div class="btn-group float-right">
@@ -88,7 +88,7 @@
                                 <td class="check-mail">
                                     <input type="checkbox" class="i-checks">
                                 </td>
-                                <td class="mail-ontact"><a href="mail_detail.html">@item.ReceiverUser.WriterName</a></td>
+                                <td class="mail-ontact"><a href="mail_detail.html">@item.SenderUser.WriterName</a></td>
                                 <td class="mail-subject"><a href="mail_detail.html">@item.Subject</a></td>
                                 <td class="text-right mail-date">@item.MessageDate</td>
                             </tr>
@@ -99,7 +99,7 @@
 
                 </div>
             </div>
-
+</div>
     </div>
 </body>
 
