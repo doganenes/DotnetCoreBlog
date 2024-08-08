@@ -1,4 +1,5 @@
 ﻿using CoreBlog.EntityLayer.Concrete;
+using CoreBlog.UI.Areas.Admin.Models;
 using CoreBlog.UI.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +10,7 @@ namespace CoreBlog.UI.Areas.Admin.Controllers
     public class AdminRoleController : Controller
     {
         private readonly RoleManager<AppRole> _roleManager;
+        private readonly UserManager<AppUser> _userManager;
 
         public AdminRoleController(RoleManager<AppRole> roleManager)
         {
@@ -92,5 +94,36 @@ namespace CoreBlog.UI.Areas.Admin.Controllers
 
             return View();
         }
+
+        public IActionResult UserRoleList()
+        {
+            var values = _userManager.Users.ToList();
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> AssignRole(int id)
+        {
+            var user = _userManager.Users.FirstOrDefault(x => x.Id == id);
+            var roles = _roleManager.Roles.ToList();
+
+
+            TempData["Userid"] = user.Id;
+
+            var userRoles = await _userManager.GetRolesAsync(user);
+            List<RoleAssignViewModel> model = new List<RoleAssignViewModel>();
+
+            foreach(var item in roles)
+            {
+                RoleAssignViewModel m = new RoleAssignViewModel();
+                m.RoleId = item.Id;
+                m.Name = item.Name;
+                m.Exists = userRoles.Contains(item.Name);
+                model.Add(m);
+            }
+
+            return View(model);
+        }
+
     }
 }
