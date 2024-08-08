@@ -51,5 +51,46 @@ namespace CoreBlog.UI.Areas.Admin.Controllers
             }
             return View(p);
         }
+
+        [HttpGet]
+        public IActionResult UpdateRole(int id)
+        {
+            var values = _roleManager.Roles.FirstOrDefault(x => x.Id == id);
+
+            RoleUpdateViewModel model = new RoleUpdateViewModel()
+            {
+                Id = values.Id,
+                Name = values.Name
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateRole(RoleUpdateViewModel model)
+        {
+            var values = _roleManager.Roles.Where(x => x.Id == model.Id).FirstOrDefault();
+            values.Name = model.Name;
+            var result = await _roleManager.UpdateAsync(values);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index","AdminRole");
+            }
+
+            return View(model);
+        }
+
+        public async Task<IActionResult> DeleteRole(int id)
+        {
+            var values = _roleManager.Roles.FirstOrDefault();
+            var result = await _roleManager.DeleteAsync(values);
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
     }
 }
