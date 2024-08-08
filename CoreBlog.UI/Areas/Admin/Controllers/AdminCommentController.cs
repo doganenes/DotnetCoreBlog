@@ -5,13 +5,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlog.UI.Areas.Admin.Controllers
 {
-    [AllowAnonymous]
-    public class AdminBlogController : Controller
+    [Area("Admin")]
+    public class AdminCommentController : Controller
     {
-        BlogManager bm = new BlogManager(new EfBlogRepository());
+        CommentManager cm = new CommentManager(new EfCommentRepository());
         public IActionResult Index()
         {
-            var values = bm.GetBlogListWithCategory();
+
+            var values = cm.GetCommentWithBlog();
             return View(values);
         }
     }
