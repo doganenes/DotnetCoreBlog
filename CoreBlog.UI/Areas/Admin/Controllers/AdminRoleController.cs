@@ -1,12 +1,14 @@
 ﻿using CoreBlog.EntityLayer.Concrete;
 using CoreBlog.UI.Areas.Admin.Models;
 using CoreBlog.UI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlog.UI.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,Moderator")]
     public class AdminRoleController : Controller
     {
         private readonly RoleManager<AppRole> _roleManager;
@@ -76,7 +78,7 @@ namespace CoreBlog.UI.Areas.Admin.Controllers
             var result = await _roleManager.UpdateAsync(values);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index","AdminRole");
+                return RedirectToAction("Index", "AdminRole");
             }
 
             return View(model);
@@ -113,7 +115,7 @@ namespace CoreBlog.UI.Areas.Admin.Controllers
             var userRoles = await _userManager.GetRolesAsync(user);
             List<RoleAssignViewModel> model = new List<RoleAssignViewModel>();
 
-            foreach(var item in roles)
+            foreach (var item in roles)
             {
                 RoleAssignViewModel m = new RoleAssignViewModel();
                 m.RoleId = item.Id;
@@ -131,7 +133,7 @@ namespace CoreBlog.UI.Areas.Admin.Controllers
             var userid = (int)TempData["UserId"];
             var user = _userManager.Users.FirstOrDefault(x => x.Id == userid);
 
-            foreach(var item in model)
+            foreach (var item in model)
             {
                 if (item.Exists)
                 {
