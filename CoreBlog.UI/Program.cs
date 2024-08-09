@@ -29,6 +29,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         x.LoginPath = "/Login/Index";
     });
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.AccessDeniedPath = new PathString("/Login/AccessDenied");
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

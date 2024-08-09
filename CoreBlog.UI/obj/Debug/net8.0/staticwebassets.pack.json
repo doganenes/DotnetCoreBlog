@@ -277,6 +277,30 @@
       "PackagePath": "staticwebassets\\CoreBlogTema\\webfonts\\fa-solid-900.woff2"
     },
     {
+      "Id": "C:\\Users\\casper\\Desktop\\projects\\.NET Full Stack\\DotNet\\API\\DotnetCoreProjeKampi\\CoreBlog\\CoreBlog.UI\\wwwroot\\Forbidden403Template\\403forbidden\\README.markdown",
+      "PackagePath": "staticwebassets\\Forbidden403Template\\403forbidden\\README.markdown"
+    },
+    {
+      "Id": "C:\\Users\\casper\\Desktop\\projects\\.NET Full Stack\\DotNet\\API\\DotnetCoreProjeKampi\\CoreBlog\\CoreBlog.UI\\wwwroot\\Forbidden403Template\\403forbidden\\dist\\index.html",
+      "PackagePath": "staticwebassets\\Forbidden403Template\\403forbidden\\dist\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\casper\\Desktop\\projects\\.NET Full Stack\\DotNet\\API\\DotnetCoreProjeKampi\\CoreBlog\\CoreBlog.UI\\wwwroot\\Forbidden403Template\\403forbidden\\dist\\style.css",
+      "PackagePath": "staticwebassets\\Forbidden403Template\\403forbidden\\dist\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\casper\\Desktop\\projects\\.NET Full Stack\\DotNet\\API\\DotnetCoreProjeKampi\\CoreBlog\\CoreBlog.UI\\wwwroot\\Forbidden403Template\\403forbidden\\license.txt",
+      "PackagePath": "staticwebassets\\Forbidden403Template\\403forbidden\\license.txt"
+    },
+    {
+      "Id": "C:\\Users\\casper\\Desktop\\projects\\.NET Full Stack\\DotNet\\API\\DotnetCoreProjeKampi\\CoreBlog\\CoreBlog.UI\\wwwroot\\Forbidden403Template\\403forbidden\\src\\index.html",
+      "PackagePath": "staticwebassets\\Forbidden403Template\\403forbidden\\src\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\casper\\Desktop\\projects\\.NET Full Stack\\DotNet\\API\\DotnetCoreProjeKampi\\CoreBlog\\CoreBlog.UI\\wwwroot\\Forbidden403Template\\403forbidden\\src\\style.css",
+      "PackagePath": "staticwebassets\\Forbidden403Template\\403forbidden\\src\\style.css"
+    },
+    {
       "Id": "C:\\Users\\casper\\Desktop\\projects\\.NET Full Stack\\DotNet\\API\\DotnetCoreProjeKampi\\CoreBlog\\CoreBlog.UI\\wwwroot\\InspinaTemplate\\.gitignore",
       "PackagePath": "staticwebassets\\InspinaTemplate\\.gitignore"
     },

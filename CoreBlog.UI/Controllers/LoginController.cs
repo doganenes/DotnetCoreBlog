@@ -49,5 +49,10 @@ namespace CoreBlog.UI.Controllers
             return RedirectToAction("Index", "Login");
         }
 
+        public IActionResult AccessDenied()
+        {
+
+            return View();
+        }
     }
 }
