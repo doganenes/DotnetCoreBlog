@@ -1,0 +1,6 @@
+@CoreBlog.JwtAPI_HostAddress = http://localhost:5095
+
+GET {{CoreBlog.JwtAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

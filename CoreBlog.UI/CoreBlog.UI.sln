@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBlog.BusinessLayer", ".
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBlog.CoreLayer", "..\CoreBlog.CoreLayer\CoreBlog.CoreLayer.csproj", "{BF40CA7C-6CE2-43DA-8CBC-F2B4F1ABB871}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBlog.API", "..\CoreBlog.API\CoreBlog.API.csproj", "{ACE3EDA3-79FD-43A3-B755-704FA26A17BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBlog.API", "..\CoreBlog.API\CoreBlog.API.csproj", "{ACE3EDA3-79FD-43A3-B755-704FA26A17BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBlog.JwtAPI", "..\CoreBlog.JwtAPI\CoreBlog.JwtAPI.csproj", "{AD21C33C-2755-4C1B-AF22-BBE11CEB352A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{ACE3EDA3-79FD-43A3-B755-704FA26A17BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACE3EDA3-79FD-43A3-B755-704FA26A17BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACE3EDA3-79FD-43A3-B755-704FA26A17BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD21C33C-2755-4C1B-AF22-BBE11CEB352A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD21C33C-2755-4C1B-AF22-BBE11CEB352A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD21C33C-2755-4C1B-AF22-BBE11CEB352A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD21C33C-2755-4C1B-AF22-BBE11CEB352A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
