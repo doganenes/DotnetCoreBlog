@@ -5,9 +5,7 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -16,11 +14,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     x.RequireHttpsMetadata = false; // https alanı false yapıldı
     x.TokenValidationParameters = new TokenValidationParameters
     {
-        ValidateIssuer = true, 
-        ValidateAudience = true, 
-        ValidIssuer = "http://localhost", 
-        ValidAudience = "http://localhost", 
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("aspnetcoreprojekampi")),
+        ValidIssuer = "http://localhost",
+        ValidAudience = "http://localhost",
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("aspnetcoreprojekampitokengeneratekey123")),
         ValidateIssuerSigningKey = true,
         ValidateLifetime = true,
         ClockSkew = TimeSpan.Zero
@@ -36,8 +32,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// UseRouting çağrısını önce yapıyoruz
+app.UseRouting();
+
+// Authentication ve Authorization middleware'lerini sırayla ekliyoruz
+app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllers();
+// UseEndpoints çağrısını en sona alıyoruz
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.Run();
