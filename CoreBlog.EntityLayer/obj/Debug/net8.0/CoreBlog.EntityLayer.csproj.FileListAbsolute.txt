@@ -1,6 +1,7 @@
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.EntityLayer\bin\Debug\net8.0\CoreBlog.EntityLayer.deps.json
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.EntityLayer\bin\Debug\net8.0\CoreBlog.EntityLayer.dll
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.EntityLayer\bin\Debug\net8.0\CoreBlog.EntityLayer.pdb
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.EntityLayer\obj\Debug\net8.0\CoreBlog.EntityLayer.csproj.AssemblyReference.cache
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.EntityLayer\obj\Debug\net8.0\CoreBlog.EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.EntityLayer\obj\Debug\net8.0\CoreBlog.EntityLayer.AssemblyInfoInputs.cache
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.EntityLayer\obj\Debug\net8.0\CoreBlog.EntityLayer.AssemblyInfo.cs
@@ -10,4 +11,3 @@ C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.EntityLayer\obj\Debug\net8.0\refint\CoreBlog.EntityLayer.dll
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.EntityLayer\obj\Debug\net8.0\CoreBlog.EntityLayer.pdb
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.EntityLayer\obj\Debug\net8.0\ref\CoreBlog.EntityLayer.dll
-C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.EntityLayer\obj\Debug\net8.0\CoreBlog.EntityLayer.csproj.AssemblyReference.cache

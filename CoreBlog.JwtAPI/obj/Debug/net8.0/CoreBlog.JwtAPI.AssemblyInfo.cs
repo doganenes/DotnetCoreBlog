@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoreBlog.JwtAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ff0a6cc836c3f4dc1c3003513a587e7a90957ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d689371f3177dda1f5055f2132fd5ae5de18368")]
 [assembly: System.Reflection.AssemblyProductAttribute("CoreBlog.JwtAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CoreBlog.JwtAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

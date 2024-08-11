@@ -1,0 +1,9 @@
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Release\net8.0\win-x64\CoreBlog.UI.csproj.AssemblyReference.cache
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Release\net8.0\win-x64\CoreBlog.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Release\net8.0\win-x64\CoreBlog.UI.AssemblyInfoInputs.cache
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Release\net8.0\win-x64\CoreBlog.UI.AssemblyInfo.cs
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Release\net8.0\win-x64\CoreBlog.UI.csproj.CoreCompileInputs.cache
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Release\net8.0\win-x64\CoreBlog.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Release\net8.0\win-x64\CoreBlog.UI.RazorAssemblyInfo.cache
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Release\net8.0\win-x64\CoreBlog.UI.RazorAssemblyInfo.cs
+C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Release\net8.0\win-x64\CoreBlog.UI.sourcelink.json

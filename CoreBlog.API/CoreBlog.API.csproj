@@ -24,4 +24,8 @@
     <ProjectReference Include="..\CoreBlog.DataAccessLayer\CoreBlog.DataAccessLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="obj\Release\net8.0\" />
+  </ItemGroup>
+
 </Project>
