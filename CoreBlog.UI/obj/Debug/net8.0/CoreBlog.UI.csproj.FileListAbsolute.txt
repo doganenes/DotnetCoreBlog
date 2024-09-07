@@ -285,8 +285,3 @@ C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\CoreBlog.API.staticwebassets.endpoints.json
-C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\CoreBlog.UI.staticwebassets.endpoints.json
-C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\bin\Debug\net8.0\System.Text.Json.dll
-C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\casper\Desktop\projects\.NET Full Stack\DotNet\API\DotnetCoreProjeKampi\CoreBlog\CoreBlog.UI\obj\Debug\net8.0\staticwebassets\msbuild.CoreBlog.UI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
