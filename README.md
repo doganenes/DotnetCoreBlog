@@ -82,7 +82,7 @@ The project follows a **layered architecture** pattern:
 
 ## Technology Stack
 
-- **.NET Core 6.0+**
+- **.NET Core 8.0
 - **Entity Framework Core** - ORM for data access
 - **JWT Bearer Authentication** - Token-based authentication
 - **ASP.NET Core MVC** - Web application framework
